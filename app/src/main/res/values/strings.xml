@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Mistakes Diary</string>
+
+    <!--MainActivity-->
+    <string name="mistake">What\'s gone wrong?</string>
+    <string name="mistake_hint">I blew up the universe</string>
+    <string name="correction">How can you correct it?</string>
+    <string name="correction_hint">But I can create a new one!</string>
+    <string name="experience">What experience have you got?</string>
+    <string name="experience_hint">I learned to stop worrying and love the bomb</string>
+    <string name="add_mistake">Add mistake</string>
+
+    <!--MistakesList-->
+    <string name="edit_btn">Edit mistake</string>
+
+    <!--NewMistakeActivity-->
+    <string name="rb_light">average</string>
+    <string name="rb_medium">big</string>
+    <string name="rb_hard">VERY painful</string>
+    <string name="no_mistake_to_save_error">Input mistake description to save!</string>
+</resources>
