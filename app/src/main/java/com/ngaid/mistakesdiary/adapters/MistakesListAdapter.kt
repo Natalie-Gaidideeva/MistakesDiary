@@ -11,7 +11,7 @@ import android.widget.TextView
 import com.ngaid.mistakesdiary.MistakeActivity
 import com.ngaid.mistakesdiary.R
 import com.ngaid.mistakesdiary.model.ShortMistake
-import com.ngaid.mistakesdiary.presenter.getColor
+import com.ngaid.mistakesdiary.presenter.toColor
 
 class MistakesListAdapter(
     private val context: Context,
@@ -48,9 +48,9 @@ class MistakesListAdapter(
 
         h.mistakeTV.text = dbMistake.description
         when (dbMistake.type) {
-            0 -> h.mistakeTV.setBackgroundColor(getColor(R.color.lightMistake))
-            1 -> h.mistakeTV.setBackgroundColor(getColor(R.color.mediumMistake))
-            2 -> h.mistakeTV.setBackgroundColor(getColor(R.color.hardMistake))
+            0 -> h.mistakeTV.setBackgroundColor(R.color.lightMistake.toColor())
+            1 -> h.mistakeTV.setBackgroundColor(R.color.mediumMistake.toColor())
+            2 -> h.mistakeTV.setBackgroundColor(R.color.hardMistake.toColor())
         }
         h.editBtn.setOnClickListener {
             editMistake(dbMistake.id)

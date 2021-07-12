@@ -6,8 +6,8 @@ import com.ngaid.mistakesdiary.App
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-fun getColor(@ColorRes id: Int): Int {
-    return ContextCompat.getColor(App.c, id)
+fun @receiver:ColorRes Int.toColor(): Int {
+    return ContextCompat.getColor(App.c, this)
 }
 
 fun epochDayToMonthDd(dayInEpoch: Long): String {
