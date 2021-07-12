@@ -15,18 +15,19 @@ import com.kizitonwose.calendarview.model.DayOwner
 import com.kizitonwose.calendarview.ui.DayBinder
 import com.kizitonwose.calendarview.ui.MonthHeaderFooterBinder
 import com.kizitonwose.calendarview.ui.ViewContainer
-import com.ngaid.mistakesdiary.databinding.ActivityMainBinding
+import com.ngaid.mistakesdiary.databinding.ActivityCalendarBinding
 import java.time.DayOfWeek
 import java.time.LocalDate
 import java.time.YearMonth
 
-class MainActivity : AppCompatActivity() {              //TODO:refactor
+class CalendarActivity : AppCompatActivity() {              //TODO:refactor
 
     var selectedDate: LocalDate = LocalDate.now()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val b: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        val b: ActivityCalendarBinding =
+            DataBindingUtil.setContentView(this, R.layout.activity_calendar)
 
         setSupportActionBar(b.toolbar)
 

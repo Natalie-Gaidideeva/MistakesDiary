@@ -6,13 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.ngaid.mistakesdiary.databinding.ActivityNewMistakeBinding
 import com.ngaid.mistakesdiary.model.Mistake
-import com.ngaid.mistakesdiary.presenter.EditMistake
 import com.ngaid.mistakesdiary.presenter.MistakePresenter
 import com.ngaid.mistakesdiary.presenter.epochDayToMonthDd
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class MistakeActivity : AppCompatActivity(), EditMistake {
+class MistakeActivity : AppCompatActivity() {
     //TODO: separate newMistake and editMistake activities
 
     companion object {
@@ -24,7 +23,7 @@ class MistakeActivity : AppCompatActivity(), EditMistake {
 
     private var mistakeId = 0
     private val isEditMode
-        get() = mistakeId != 0                                      //if we are opening certain mistake from db for edit
+        get() = mistakeId != 0                                      //if we are opening certain mistake from to edit
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +43,7 @@ class MistakeActivity : AppCompatActivity(), EditMistake {
         }
     }
 
-    override suspend fun fillInMistakeForm(mistake: Mistake) {
+    suspend fun fillInMistakeForm(mistake: Mistake) {
         withContext(Dispatchers.Main) {
             b.mistakeET.setText(mistake.description)
             b.correctionET.setText(mistake.correction)
@@ -58,6 +57,7 @@ class MistakeActivity : AppCompatActivity(), EditMistake {
     }
 
     private fun onClickSaveMistakeBtn() {
+        //TODO: make function with mistake.notblank check in presenter! and fun with toast probably?
         if (b.mistakeET.text.toString().isNotBlank())
             mistakePresenterImpl.saveNewMistake(
                 description = b.mistakeET.text.toString(),

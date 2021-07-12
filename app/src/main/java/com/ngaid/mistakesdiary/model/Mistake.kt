@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "mistakes", indices = [Index("epochDay")])
 data class Mistake(
     val description: String,
-    val type: Int,
+    val type: Int,                      //TODO: change to enum class & add room typeconverter for it
     val correction: String,
     val experience: String,
     val epochDay: Long,

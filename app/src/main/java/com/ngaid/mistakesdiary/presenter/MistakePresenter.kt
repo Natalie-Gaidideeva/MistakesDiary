@@ -1,21 +1,19 @@
 package com.ngaid.mistakesdiary.presenter
 
 import com.ngaid.mistakesdiary.App
+import com.ngaid.mistakesdiary.MistakeActivity
 import com.ngaid.mistakesdiary.model.Mistake
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.lang.ref.WeakReference
 
-interface EditMistake {
-    suspend fun fillInMistakeForm(mistake: Mistake)
-}
-
+//TODO: create interfaces for presenters and view with attach/detach
 class MistakePresenter {
 
-    private var mistakeView: WeakReference<EditMistake>? = null
+    private var mistakeView: WeakReference<MistakeActivity>? = null
 
-    fun attachView(view: EditMistake) {
+    fun attachView(view: MistakeActivity) {
         mistakeView = WeakReference(view)
     }
 

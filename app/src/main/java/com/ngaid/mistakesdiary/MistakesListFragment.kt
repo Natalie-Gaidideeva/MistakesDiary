@@ -24,7 +24,7 @@ class MistakesListFragment : ListFragment() {
 
         val listPresenter = ListPresenter()
         listPresenter.attachView(this)
-        listPresenter.bindMistakes()                    //TODO:try pass setAdapter() as lambda!
+        listPresenter.bindMistakes()
 
         return super.onCreateView(inflater, container, savedInstanceState)
     }

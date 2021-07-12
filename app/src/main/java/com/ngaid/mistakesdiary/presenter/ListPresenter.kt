@@ -7,6 +7,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.lang.ref.WeakReference
 
+//TODO: create interfaces for presenters and view with attach/detach
 class ListPresenter {
 
     private var listFragment: WeakReference<MistakesListFragment>? = null
