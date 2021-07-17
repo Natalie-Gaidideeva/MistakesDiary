@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MistakeActivity">
+        <activity android:name=".MistakeCreationView">
+
+        </activity>
+        <activity android:name=".MistakeEditionView">
 
         </activity>
     </application>

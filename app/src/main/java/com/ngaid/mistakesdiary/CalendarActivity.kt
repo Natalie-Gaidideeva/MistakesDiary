@@ -48,7 +48,7 @@ class CalendarActivity : AppCompatActivity() {              //TODO:refactor
     }
 
     private fun onClickAddMistake() {
-        val intent = Intent(this, MistakeActivity::class.java)
+        val intent = Intent(this, MistakeCreationView::class.java)
         startActivity(intent)
     }
 

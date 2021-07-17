@@ -11,6 +11,9 @@ interface MistakeDao {
     @Query("SELECT * FROM mistakes WHERE id = :id")
     suspend fun getById(id: Int): Mistake
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert
     suspend fun insert(mistake: Mistake)
+
+    @Update
+    suspend fun update(mistake: Mistake)
 }
