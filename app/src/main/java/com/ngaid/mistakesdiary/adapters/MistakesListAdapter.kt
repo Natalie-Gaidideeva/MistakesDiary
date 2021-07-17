@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageButton
 import android.widget.TextView
-import com.ngaid.mistakesdiary.MistakeActivity
+import com.ngaid.mistakesdiary.MistakeEditionView
 import com.ngaid.mistakesdiary.R
 import com.ngaid.mistakesdiary.model.ShortMistake
-import com.ngaid.mistakesdiary.presenter.toColor
+import com.ngaid.mistakesdiary.toColor
 
 class MistakesListAdapter(
     private val context: Context,
@@ -60,8 +60,8 @@ class MistakesListAdapter(
     }
 
     private fun editMistake(id: Int) {
-        val intent = Intent(context, MistakeActivity::class.java)
-        intent.putExtra(MistakeActivity.ID, id)
+        val intent = Intent(context, MistakeEditionView::class.java)
+        intent.putExtra(MistakeEditionView.ID, id)
         context.startActivity(intent)
     }
 

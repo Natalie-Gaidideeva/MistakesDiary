@@ -1,8 +1,7 @@
-package com.ngaid.mistakesdiary.presenter
+package com.ngaid.mistakesdiary
 
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
-import com.ngaid.mistakesdiary.App
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
